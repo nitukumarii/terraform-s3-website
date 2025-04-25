@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>John's Portfolio</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #f4f4f4;
+      color: #333;
+    }
+
+    header {
+      background: #4a90e2;
+      color: white;
+      padding: 2rem 1rem;
+      text-align: center;
+      animation: fadeInDown 1s ease-out;
+    }
+
+    @keyframes fadeInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    section {
+      padding: 2rem;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    h2 {
+      color: #4a90e2;
+      margin-bottom: 1rem;
+    }
+
+    .project, .review {
+      background: white;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      transition: transform 0.3s ease;
+    }
+
+    .project:hover, .review:hover {
+      transform: scale(1.02);
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: #333;
+      color: white;
+      margin-top: 3rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Welcome to John's Portfolio</h1>
+    <p>Frontend Developer | React | AWS | Terraform</p>
+  </header>
+
+  <section>
+    <h2>Projects</h2>
+    <div class="project">
+      <h3>Portfolio Website</h3>
+      <p>Responsive personal portfolio built with HTML, CSS, and JavaScript.</p>
+    </div>
+    <div class="project">
+      <h3>Weather App</h3>
+      <p>Simple weather app using OpenWeather API and React.</p>
+    </div>
+    <div class="project">
+      <h3>Infrastructure as Code</h3>
+      <p>Deployed S3 static site using Terraform with automated CI/CD pipeline.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Reviews</h2>
+    <div class="review">
+      <p>"John is an exceptional engineer! Very responsive and detail-oriented."</p>
+      <strong>- Sarah T., Project Manager</strong>
+    </div>
+    <div class="review">
+      <p>"Delivered everything before deadline and with great quality."</p>
+      <strong>- Raj K., Team Lead</strong>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 John Doe. All rights reserved.
+  </footer>
+
+</body>
+</html>
