@@ -1,0 +1,48 @@
+🛠️ Challenges Faced & Solutions (Git Troubleshooting)
+1. ❌ No Remote Repository Added
+Error:
+fatal: No configured push destination.
+Reason: Tried to push code without configuring a remote repository.
+
+2. ❌ Push Failed – src refspec main does not match any
+Error:
+error: src refspec main does not match any
+Reason: Attempted to push a branch that didn't exist or had no commits yet.
+Solution:
+git add .
+git commit -m "Initial commit"
+git push -u origin main
+
+3. ❌ Push to master Failed – Repository not found
+Error:
+remote: Repository not found.
+fatal: repository 'https://github.com/your-username/your-repo.git/' not found
+Reason: The GitHub repository did not exist or the URL was incorrect.
+Solution:
+Create the repository on GitHub.
+Double-check the repository URL.
+Set the correct URL:
+git remote set-url origin https://github.com/your-username/your-repo.git
+
+4. ⚠️ Remote Origin Already Exists
+Error:
+error: remote origin already exists.
+Reason: Tried to add a remote that was already configured.
+Solution:
+git remote set-url origin https://github.com/your-username/your-repo.git
+# OR
+git remote remove origin
+git remote add origin https://github.com/your-username/your-repo.git
+
+5. ❌ Push Rejected – Remote Contains Work You Don't Have Locally
+Error:
+! [rejected] main -> main (fetch first)
+error: failed to push some refs to 'https://github.com/...'
+hint: Updates were rejected because the remote contains work that you do not
+hint: have locally. This is usually caused by another repository pushing to
+hint: the same ref. If you want to integrate the remote changes, use
+hint: 'git pull' before pushing again.
+Reason: The remote branch had changes not present in the local branch.
+Solution:
+git pull origin main --rebase
+git push origin main
